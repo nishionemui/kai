@@ -14,7 +14,7 @@
 
   &__left {
     line-height: 10vh;
-    margin-left: 350px;
+    margin-left: 360px;
   }
   
   &__right {
@@ -50,6 +50,7 @@
 
       &__calendar {
         margin-bottom: 180px;
+        padding-left: 20px;
 
         &--text {
           margin: 0 0 10px 0;
@@ -100,9 +101,16 @@
       
 
       ul {
-        padding: 10px 0 10px 10px;
+        padding: 20px 0 30px 20px;
         position: absolute;/*←絶対位置*/
         bottom: 0; /*下に固定*/
+
+        .main--side__right__information__pressure__hi {
+          margin-left: 20px;
+        }
+        .main--side__right__information__pressure__low {
+          margin-left: 20px;
+        }
       }
     }
 
