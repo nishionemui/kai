@@ -51,27 +51,41 @@
       &__calendar {
         margin-bottom: 180px;
 
-        &__text {
+        &--text {
           margin: 0 0 10px 0;
           text-align: center;
+          color: black;
         }
-      }
-
-
-
-      &__text {
-        background-color: grey;
-        margin: 0 0 0 20px;
       }
     }
   }
-  &--side__center {
+  &--center {
     width: calc(100vw / 2);
     background-color: #dcd6d9;
+
+    &__data {
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      background-color: cadetblue;
+      // position: fixed;
+      // z-index: 1;
+    }
+    &__box {
+      background-color: chocolate;
+      height: 100px;
+
+    }
   }
   &--side__right {
     width: calc(100vw / 4);
     background-color: #d6c6af;
+
+    &__box {
+      height: 100px;
+      background-color: blue;
+      margin: 20px 0 0 0;
+    }
   }
 }
 .futter {
