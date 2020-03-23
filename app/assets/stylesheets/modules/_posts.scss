@@ -1,3 +1,72 @@
 * {
   box-sizing: border-box;
 }
+
+.wrapper{
+  position: fixed;
+}
+.header {
+  width: 100vw;
+  height: 10vh;
+  background-color:wheat;
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    line-height: 10vh;
+    margin-left: 350px;
+  }
+  
+  &__right {
+    display: flex;
+
+    &--nenu {
+     text-align: center;
+     line-height: 10vh;
+     margin: 0 10px;
+    }
+  } 
+}
+
+.main {
+  width: 100vw;
+  height: calc(100vh - 10vh);
+  color: white;
+  display: flex;
+
+  &--side__left {
+    width: calc(100vw / 4);
+    background-color: #d6c6af;
+
+    .main--side__left__Photo {
+      height: 270px;
+      background-color: antiquewhite;
+      img.ui-datepicker-trigger{
+        cursor: pointer;
+        margin-left: 7px!important;
+        vertical-align: middle;
+      }
+      
+    }
+
+    .main--side__left__calendar {
+      height: calc(100vh - 10vh - 270px);
+      background-color: white;
+    }
+  }
+  &--side__center {
+    width: calc(100vw / 2);
+    background-color: #dcd6d9;
+  }
+  &--side__right {
+    width: calc(100vw / 4);
+    background-color: #d6c6af;
+  }
+}
+.futter {
+  width: 100%;
+  height: 10vh;
+  background-color: #b9d08b;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+}

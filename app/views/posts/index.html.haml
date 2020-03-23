@@ -1,12 +1,23 @@
 .wrapper 
   .header
-    .left
-      ○○様
-    .center
-      見える介護
-    %ul.rigth
-      メンバー
-      %li.right__name
-        〇〇、◯◯
-      
-    
+    .header__left
+      タイトル
+    %ul.header__right
+      %li.header__right--nenu
+        新規登録
+      %li.header__right--nenu
+        ログイン
+
+  .main
+    .main--side__left
+      .main--side__left__Photo
+        写真
+      .main--side__left__calendar
+        <input type="text" id="xxdate" />
+    .main--side__center
+      メッセージ
+    .main--side__right
+      登録情報
+  
+  .futter
+    form
