@@ -95,6 +95,10 @@
         height: 100px;
         background-color: blue;
         margin: 20px 0 0 0;
+
+        &__item{
+          margin-bottom: 10px;
+        }
       }
     }
     &__information {

@@ -5,12 +5,24 @@
     .header__center
       タイトル
     %ul.header__right
-      %li.header__right--nenu
-        新規登録
-      %li.header__right--nenu
-        ログイン
-      %li.header__right--nenu
-        編集
+      -# %li.header__right--nenu
+      -#   新規登録
+      -# %li.header__right--nenu
+      -#   = link_to new_user_session_path do
+      -#     ログイン
+      -# %li.header__right--nenu
+      -#   編集
+      - if user_signed_in?	
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header__right--nenu'
+        %li.header__right--nenu
+          = link_to edit_user_path(current_user) do
+            編集
+      - else
+        %li.header__right--nenu
+          新規登録
+        %li.header__right--nenu
+          = link_to new_user_session_path do
+            ログイン
   .main
     .main--side__left
       .main--side__left__Photo
@@ -33,40 +45,40 @@
     .main--side__right
       .main--side__right__box
         .main--side__right__box__content
-          .main--side__right__box__content__name
+          .main--side__right__box__content__item
             名前  
-          .main--side__right__box__content__tel
+          .main--side__right__box__content__item
             電話番号
-          .main--side__right__box__content__address
-            住所
+          .main--side__right__box__content__item
+            施設名
         .main--side__right__box__content
-          .main--side__right__box__content__name
+          .main--side__right__box__content__item
             名前  
-          .main--side__right__box__content__tel
+          .main--side__right__box__content__item
             電話番号
-          .main--side__right__box__content__address
-            住所
+          .main--side__right__box__content__item
+            施設名
         .main--side__right__box__content
-          .main--side__right__box__content__name
+          .main--side__right__box__content__item
             名前  
-          .main--side__right__box__content__tel
+          .main--side__right__box__content__item
             電話番号
-          .main--side__right__box__content__address
-            住所
+          .main--side__right__box__content__item
+            施設名
         .main--side__right__box__content
-          .main--side__right__box__content__name
+          .main--side__right__box__content__item
             名前  
-          .main--side__right__box__content__tel
+          .main--side__right__box__content__item
             電話番号
-          .main--side__right__box__content__address
-            住所
+          .main--side__right__box__content__item
+            施設名
         .main--side__right__box__content
-          .main--side__right__box__content__name
+          .main--side__right__box__content__item
             名前  
-          .main--side__right__box__content__tel
+          .main--side__right__box__content__item
             電話番号
-          .main--side__right__box__content__address
-            住所
+          .main--side__right__box__content__item
+            施設名
     
       .main--side__right__information
         %ul
