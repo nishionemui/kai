@@ -39,7 +39,8 @@
             = f.password_field :password, autocomplete: "off"
         .field
           .field-label
-            = f.label :パスワード（確認用）
+            = f.label :パスワード
+            %i（確認用）
           .field-input
             = f.password_field :password_confirmation, autocomplete: "off"
         .actions
