@@ -9,7 +9,7 @@
         %li.header__right--nenu
           = link_to new_group_path(current_user) do
             グループ設定
-        = button_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header__right--nenu'
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header__right--nenu'
         %li.header__right--nenu
           = link_to edit_user_path(current_user) do
             編集

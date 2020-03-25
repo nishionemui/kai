@@ -1,4 +1,31 @@
+h1 span {
+	font: 26px Monaco, MonoSpace;
+  height: 200px;
+	position: absolute;
+	color:#37d;
+	width: 20px;
+	left: 380px;
+	top: 10px;
+  transform-origin: bottom center;
+  margin: 0 0 50px 280px;
+  display: flex;
+  justify-content: space-between;
+	}
+  .char1 { transform: rotate(-37deg); }
+  .char2 { transform: rotate(-30deg); }
+  .char3 { transform: rotate(-23deg); }
+  .char4 { transform: rotate(-16deg); }
+  .char5 { transform: rotate(-9deg); }
+  .char6 { transform: rotate(-2deg); }
+  .char7 { transform: rotate(5deg); }
+  .char8 { transform: rotate(12deg); }
+  .char9 { transform: rotate(19deg); }
+  .char10 { transform: rotate(26deg); }
+  .char11 { transform: rotate(33deg); }
+  .char12 { transform: rotate(40deg); }
+  
 .account-page {
+  margin-top: 150px;
   .account-page__inner {
     width: 980px;
     margin: 60px auto;
