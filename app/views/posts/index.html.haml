@@ -25,35 +25,6 @@
         %li.header__right--nenu
           = link_to new_user_session_path do
             ログイン
-    -# .header__left
-    -#   - if user_signed_in?	
-    -#     .header__left
-    -#       = current_user.name
-    -#     .header__center
-    -#   - else
-    -#     .header__left
-    -#       名前
-    -#     .header__center
-    -#       タイトル
-    -# %ul.header__right
-    -#   -# %li.header__right--nenu
-    -#   -#   新規登録
-    -#   -# %li.header__right--nenu
-    -#   -#   = link_to new_user_session_path do
-    -#   -#     ログイン
-    -#   -# %li.header__right--nenu
-    -#   -#   編集
-    -#   - if user_signed_in?	
-    -#     = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header__right--nenu'
-    -#     %li.header__right--nenu
-    -#       = link_to edit_user_path(current_user) do
-    -#         編集
-    -#   - else
-    -#     %li.header__right--nenu
-    -#       新規登録
-    -#     %li.header__right--nenu
-    -#       = link_to new_user_session_path do
-    -#         ログイン
   .main
     .main--side__left
       .main--side__left__Photo
