@@ -1,3 +1,133 @@
 * {
   box-sizing: border-box;
 }
+
+.wrapper{
+  position: fixed;
+}
+.header {
+  width: 100vw;
+  height: 10vh;
+  background-color:wheat;
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    line-height: 10vh;
+    margin-left: 60px;
+  }
+
+  &__center {
+    line-height: 10vh;
+  }
+  
+  &__right {
+    display: flex;
+
+    &--nenu {
+     text-align: center;
+     line-height: 10vh;
+     margin: 0 20px 0 0;
+    }
+  } 
+}
+
+.main {
+  width: 100vw;
+  height: calc(100vh - 10vh);
+  color: white;
+  display: flex;
+
+  &--side__left {
+    width: calc(100vw / 4);
+    background-color: #d6c6af;
+
+    .main--side__left__Photo {
+      height: 270px;
+      background-color: antiquewhite;
+    }
+
+    .main--side__left__content {
+      height: calc(100vh - 10vh - 270px);
+      background-color: wheat;
+      padding: 20px 0  0 0;
+
+      &__calendar {
+        margin-bottom: 180px;
+        padding-left: 20px;
+
+        &--text {
+          margin: 0 0 10px 0;
+          text-align: center;
+          color: black;
+        }
+      }
+    }
+  }
+  &--center {
+    width: calc(100vw / 2);
+    background-color: #dcd6d9;
+
+    &__data {
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      background-color: cadetblue;
+      // position: fixed;
+      // z-index: 1;
+    }
+    &__box {
+      background-color: chocolate;
+      height: 100px;
+
+    }
+  }
+  &--side__right {
+    width: calc(100vw / 4);
+    height: 100%;
+    background-color: #d6c6af;
+
+    &__box {
+      height: 500px;
+      overflow: scroll;
+
+      &__content {
+        height: 100px;
+        background-color: blue;
+        margin: 20px 0 0 0;
+
+        &__item{
+          margin-bottom: 10px;
+        }
+      }
+    }
+    &__information {
+      background-color: antiquewhite;
+      height: 500px;
+      color: black;
+      
+      
+
+      ul {
+        padding: 20px 0 30px 20px;
+        position: absolute;/*←絶対位置*/
+        bottom: 0; /*下に固定*/
+
+        .main--side__right__information__pressure__hi {
+          margin-left: 20px;
+        }
+        .main--side__right__information__pressure__low {
+          margin-left: 20px;
+        }
+      }
+    }
+
+  }
+}
+.futter {
+  width: calc(100% - (100% / 4));
+  height: 10vh;
+  background-color: #b9d08b;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+}

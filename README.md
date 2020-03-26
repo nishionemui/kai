@@ -6,6 +6,8 @@
 |email|string|null: false|
 |password|string|null: false|
 |name|string|null: false|
+|address|string|
+
 ### Association
 - has_many :posts
 - has_many :comments

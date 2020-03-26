@@ -1,12 +1,109 @@
 .wrapper 
   .header
-    .left
-      ○○様
-    .center
-      見える介護
-    %ul.rigth
-      メンバー
-      %li.right__name
-        〇〇、◯◯
-      
+    - if user_signed_in?  
+      .header__left
+        = current_user.name
+      .header__center
+        タイトル
+      %ul.header__right
+        %li.header__right--nenu
+          = link_to new_group_path(current_user) do
+            グループ設定
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'header__right--nenu'
+        %li.header__right--nenu
+          = link_to edit_user_path(current_user) do
+            編集
+    - else
+      .header__left
+        名前
+      .header__center
+        タイトル
+      %ul.header__right
+        %li.header__right--nenu
+          = link_to 'users/sign_up' do
+            新規登録
+        %li.header__right--nenu
+          = link_to new_user_session_path do
+            ログイン
+  .main
+    .main--side__left
+      .main--side__left__Photo
+        写真
+      .main--side__left__content
+        .main--side__left__content__calendar
+          <input type="date"></input>
+        .main--side__left__content__calendar--text
+          日付
+        .main--side__left__content__calendar--text
+          日付
+        .main--side__left__content__calendar--text
+          日付
+    .main--center
+      .main--center__data
+        ◯月◯日の様子
+      .main--center__box
+        .main--center__box--message
+          メッセージ
+    .main--side__right
+      .main--side__right__box
+        .main--side__right__box__content
+          .main--side__right__box__content__item
+            名前  
+          .main--side__right__box__content__item
+            電話番号
+          .main--side__right__box__content__item
+            施設名
+        .main--side__right__box__content
+          .main--side__right__box__content__item
+            名前  
+          .main--side__right__box__content__item
+            電話番号
+          .main--side__right__box__content__item
+            施設名
+        .main--side__right__box__content
+          .main--side__right__box__content__item
+            名前  
+          .main--side__right__box__content__item
+            電話番号
+          .main--side__right__box__content__item
+            施設名
+        .main--side__right__box__content
+          .main--side__right__box__content__item
+            名前  
+          .main--side__right__box__content__item
+            電話番号
+          .main--side__right__box__content__item
+            施設名
+        .main--side__right__box__content
+          .main--side__right__box__content__item
+            名前  
+          .main--side__right__box__content__item
+            電話番号
+          .main--side__right__box__content__item
+            施設名
     
+      .main--side__right__information
+        %ul
+          %li.main--side__right__information__name
+            名前
+          %li.main--side__right__information__tel
+            電話番号
+          %li.main--side__right__information__address
+            住所
+          %li.main--side__right__information__pressure
+            血圧
+            %li.main--side__right__information__pressure__hi
+              最高血圧
+            %li.main--side__right__information__pressure__low
+              最低血圧
+
+
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = 画像を投稿
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
+      
